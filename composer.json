@@ -1,0 +1,15 @@
+{
+  "name": "RTS/deeplinks2shortcodes",
+  "description": "This WordPress plugin creates shortcodes depending on csv files containing deeplinks",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Tobias Lauszat",
+      "email": "tobias@lauszat.de"
+    }
+  ],
+  "autoload": {
+    "psr-4": {"Rts\\Deeplinks2Shortcodes\\": "includes/"}
+  }
+}

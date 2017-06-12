@@ -1,0 +1,4 @@
+*.iml
+vendor
+.idea
+composer.phar

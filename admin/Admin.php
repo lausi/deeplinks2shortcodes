@@ -62,6 +62,8 @@ if ( ! class_exists( 'Admin' ) ) {
 			add_action( "admin_init", array( $this->settings, "rts_deeplinks2shortcodes_init" ) );
 			add_action( "admin_menu", array( $this->settings, "rts_deeplinks2shortcodes_settings_page" ) );
 
+			$this->shortcodeselector = ShortcodeSelector::getInstance();
+			add_action('admin_head', array($this->shortcodeselector, 'addSelector'));
 		}
 
 	}

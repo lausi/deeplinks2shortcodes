@@ -46,15 +46,13 @@ class Installation {
 
 				$sql = "CREATE TABLE " . $table_name . " (
 	     			id mediumint(9) NOT NULL,
-					name varchar(255) NOT NULL,
+					name varchar(100) NOT NULL,
 					url text NOT NULL,
 	  			    PRIMARY KEY  (name)
 				) $charset_collate;";
 
 				require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 				dbDelta( $sql );
-				//die( 'Query Fail: ' . $wpdb->last_error . '<br />Query: ' . $sql );
-				add_shortcode( "d2s-" . $table_name, array( $this, $table_name ) );
 
 				$sql = "REPLACE " . $table_name . " (id,name,url) VALUES ";
 				if ( ( $handle = fopen( __DIR__ . "/../data/" . $table, "r" ) ) !== false ) {

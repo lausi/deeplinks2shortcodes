@@ -93,10 +93,10 @@ class Shortcodes {
 
 			list( $file, $parameters ) = explode( '?', $result->url );
 			parse_str( $parameters, $output );
-			$output[ $this->parametername ] = $this->parametervalue;
+			$output[ get_option($this->parametername) ] = get_option($this->parametervalue);
 			$url                            = $file . '?' . http_build_query( $output );
 
-			return "<iframe style='width:100%' src='" . $url . "' />";
+			return "<iframe style='width:100%; height:4300px; margin: 10px; border: 0px;' name='Buchungsstrecke' src='" . $url . "' />";
 		}
 	}
 }

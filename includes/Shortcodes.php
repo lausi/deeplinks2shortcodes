@@ -96,7 +96,7 @@ class Shortcodes {
 			$output[ get_option($this->parametername) ] = get_option($this->parametervalue);
 			$url                            = $file . '?' . http_build_query( $output );
 
-			return "<iframe style='width:100%; height:4300px; margin: 10px; border: 0px;' name='Buchungsstrecke' src='" . $url . "' />";
+			return "<iframe style='width:100%; height:4300px; margin: 10px; border: 0px;' name='Buchungsstrecke' src='" . $url . "'></iframe>";
 		}
 	}
 }
